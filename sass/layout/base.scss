@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  &::after {
+    box-sizing: inherit;
+  }
+  &::before {
+    box-sizing: inherit;
+  }
+}
+body {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  min-width: 600px;
+  background: #111 url("../img/background.jpg") no-repeat center;
+
+}
+.main-header {
+  width: 100%;
+  background-color: #000;
+  margin-bottom: 5%;
+}
+.main-footer {
+  @extend .main-header;
+  margin-bottom: 0;
+}

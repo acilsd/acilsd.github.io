@@ -1,0 +1,11 @@
+.icon-avk-1, .icon-avk-2, .icon-avk-3, .login-form-close-button, .icon-login, 
+.login-form-user-icon, .login-form-user-icon2
+{ display: inline-block; background: url('png.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.icon-avk-1 { background-position: -5px -0px; width: 43px; height: 43px; }
+.icon-avk-2 { background-position: -5px -48px; width: 43px; height: 43px; }
+.icon-avk-3 { background-position: -5px -96px; width: 43px; height: 43px; }
+.login-form-close-button { background-position: -5px -144px; width: 21px; height: 21px; }
+.icon-login { background-position: -5px -170px; width: 18px; height: 16px; }
+.login-form-user-icon { background-position: -28px -170px; width: 15px; height: 17px; }
+.login-form-user-icon2 { background-position: -5px -191px; width: 15px; height: 15px; }

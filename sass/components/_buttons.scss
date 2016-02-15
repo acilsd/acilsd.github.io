@@ -1,0 +1,57 @@
+@import '../mixins/mixins-buttons';
+.btn-news {
+  @include main-button-properties;
+  margin-bottom: 4vh;
+  &:hover {
+    background: #663d15;
+  }
+  &:active {
+    background: #663d15;
+  }
+}
+.btn-gallery {
+  @extend .btn-news;
+  margin-left: 2%;
+  min-width: 40%;
+}
+.btn-contacts {
+  @extend .btn-news;
+  min-width: 40%;
+  margin-right: 2%;
+}
+.btn-form {
+  @extend .btn-news;
+  min-width: 88%;
+}
+.social-btn {
+  @include social-buttons;
+  &__vk {
+    background-position: -5px -0px;
+  }
+  &__fb {
+    background-position: -5px -48px;
+  }
+  &__inst {
+    background-position: -5px -96px;
+  }
+  &:hover {
+    opacity: 0.3;
+  }
+}
+.btn-copyright {
+  @extend .btn-news;
+  margin: 0;
+  &:hover {
+    background: #000;
+    opacity: 0.3;
+  }
+  &:active {
+    background: #000;
+    opacity: 0.3;
+  }
+}
+.btn-inner--error {
+  @extend .btn-news;
+  margin: 10px 0;
+  border-radius: 5px;
+}
