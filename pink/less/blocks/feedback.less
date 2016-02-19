@@ -1,0 +1,45 @@
+.feedback {
+  margin: 0 0 2px 0;
+  padding: 0 0 0 22px;
+  border-left: 2px solid @color-decor;
+
+
+
+
+  &__text {
+    margin-bottom: 0;
+    line-height: 27px;
+  }
+
+
+
+
+
+  &__author {
+    color: @color-author;
+  }
+}
+
+
+
+
+@media(min-width: 700px) {
+  .feedback {
+    padding-left: 35px;
+    margin-bottom: 56px;
+
+
+
+
+    &__text {
+      .large-text(@fweight: 400);
+    }
+
+
+
+
+    &__author {
+      .large-text(@fweight: 400; @fstyle: italic)
+    }
+  }
+}

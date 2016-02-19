@@ -1,0 +1,185 @@
+.article-preview {
+  padding: 24px 0 8px 0;
+  border-bottom: 1px solid @border-color;
+
+
+
+
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: left;
+    .large-text(@line-height: 27px);
+  }
+
+
+
+
+
+
+  &__link {
+    text-decoration: none;
+    color: @color-base;
+    .large-text(@line-height: 27px);
+  }
+
+
+
+
+
+  &__date {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: @color-decor;
+  }
+
+
+
+
+
+  &__text {
+    line-height: 27px;
+    text-align: left;
+  }
+
+
+
+
+  &--indent {
+    padding: 26px 0 11px 0;
+  }
+
+
+
+
+  &--indent-last {
+    padding: 28px 0 11px 0;
+    border-bottom: none;
+  }
+}
+
+
+
+
+@media(min-width: 700px) {
+  .article-preview {
+    position: relative;
+    margin-left: 60px;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px dotted @border-color;
+
+
+
+
+
+      &--icon:before {
+        position: absolute;
+        content: "";
+        top: 40px;
+        left: -59px;
+        width: 30px;
+        height: 25px;
+      }
+
+
+
+
+    &__title {
+      margin-top: 11px;
+      margin-bottom: 4px;
+    }
+
+
+
+
+
+    &__link {
+      font-size: 27px;
+      font-weight: 800;
+    }
+
+
+
+
+
+    &__date {
+      font-size: 14px;
+    }
+
+
+
+
+
+    &__text {
+      margin-top: 21px;
+      .large-text(@fweight: 400)
+    }
+
+
+
+
+
+    &--indent {
+      .article-preview__text {
+        padding-bottom: 32px;
+      }
+    }
+  }
+  .page-content {
+    .article-preview--icon:nth-child(3):before,
+    .article-preview--icon:nth-child(4):before
+     {
+      top: 46px;
+    }
+  }
+}
+
+
+
+
+@media(min-width: 960px) {
+  .article-preview {
+    padding-right: 60px;
+
+
+
+
+    &__title {
+      margin-top: 11px;
+    }
+
+
+
+
+    &--indent-first {
+      padding-bottom: 25px;
+      margin-bottom: 17px;
+    }
+
+
+
+
+    &--indent {
+      padding-top: 29px;
+      padding-bottom: 0;
+
+      .article-preview__text {
+        padding-bottom: 28px;
+      }
+    }
+
+
+
+
+
+    &--indent-last {
+      margin-bottom: 50px;
+    }
+  }
+}
+
