@@ -34,9 +34,8 @@
 .logo {
 	font-size: 40px;
 	font-family: "RobotoBold", Arial, Tahoma, sans-serif;
-	font-family: 700;
+	font-weight: 700;
 }
-
 /*Tabs via jquery, sorry for shitty cascade :D*/
 
 .top-contacts {
