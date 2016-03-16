@@ -1,0 +1,28 @@
+@import "../libs/bootstrap/bootstrap-grid-3.3.2.min.css";
+@import "../libs/owl/assets/owl.carousel.css";
+@import "../libs/animate/animate.min.css";
+
+@import "fonts.scss";
+@import "variables.scss";
+@import "blocks/header.scss";
+@import "blocks/teaser.scss";
+@import "blocks/content.scss";
+@import "blocks/form.scss";
+@import "blocks/footer.scss";
+@import "blocks/buttons.scss";
+@import "media.scss";
+
+body {
+	font-family: "RobotoRegular", Arial, Tahoma, sans-serif;
+	color: $text-color;
+	font-weight: normal;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialised;
+	overflow-x: hidden;
+}
+.hidden {
+	display: none;
+}

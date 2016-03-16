@@ -1,0 +1,76 @@
+.teaser-content {
+  background: #e8eff7;
+  background: linear-gradient(to bottom, #c6d8ee, #e8eff7);
+  color: $blue;
+  font-family: "CleanvertisingLight", Arial, Tahoma, sans-serif;
+  text-transform: uppercase;
+  padding: 40px 0 0;
+  & .row > div {
+    margin-bottom: 35px;
+  }
+  &__item {
+    font-size: 14px;
+    vertical-align: bottom;
+    position: relative;
+    &--logo {
+      font-family: "RobotoRegular", sans-serif;
+      letter-spacing: -10px;
+      display: inline-block;
+      text-align: center;
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 10px;
+      margin-right: 15px;
+    }
+    &-text {
+      display: inline-block;
+      word-wrap: break-word;
+      white-space: nowrap;
+      &--small{
+        display: block;
+        line-height: 14px;
+        margin-bottom: 5px;
+      }
+      &--big {
+        display: block;
+        font-size: 25px;
+        line-height: 25px;
+        font-weight: normal;
+      }
+    }
+    &--icon-book {
+      position: relative;
+      display: inline-block;
+      margin-right: 70px;
+      &::before {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        background: url("../img/sprite.png") no-repeat;
+        width: 62px;
+        height: 62px;
+        background-position: -10px -627px;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    &--icon-student {
+      @extend .teaser-content__item--icon-book;
+      margin-right: 60px;
+      &::before {
+        width: 51px;
+        height: 65px;
+        background-position: -10px -789px;
+      }
+    }
+    &--icon-ielts {
+      @extend .teaser-content__item--icon-book;
+      margin-right: 68px;
+      &::before {
+        width: 60px;
+        height: 60px;
+        background-position: -10px -709px;        
+      }
+    }
+  }
+}

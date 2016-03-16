@@ -1,0 +1,210 @@
+@import "../variables.scss";
+.feature-content {
+  padding: 58px 0 68px;
+  &__title {
+    color: $blue;
+    padding: 0 10px 0 10px;
+    font-size: 50px;
+    line-height: 56px;
+    margin-bottom: 50px;
+    font-family: "CleanvertisingLight", Arial, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 0;
+    font-weight: normal;
+  }
+}
+
+.feature-description {
+  margin-bottom: 25px;
+  &__icon--ten {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      width: 99px;
+      height: 100px;
+      background: url("../img/sprite.png") no-repeat;
+      background-position: -10px -56px;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__icon--methods {
+    @extend .feature-description__icon--ten;
+    &::before {
+      width: 99px;
+      height: 104px;
+      background-position: -10px -425px;
+    }
+  }
+  &__icon--contacts {
+    @extend .feature-description__icon--ten;
+    &::before {
+      width: 100px;
+      height: 105px;
+      background-position: -10px -176px;
+    }
+  }
+  &__icon--ind {
+    @extend .feature-description__icon--ten;
+    &::before {
+      width: 100px;
+      height: 104px;
+      background-position: -10px -301px;
+    }
+  }
+  &__text {
+    padding-left: 120px;
+    padding-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+    &--title {
+      margin: 0;
+      color: $red;
+      font-size: 28px;
+      line-height: 28px;
+      &--description {
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.review-content {
+  min-height: 600px;
+  padding: 58px 0 68px;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url("../img/bg_content.jpg");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+  color: $white;
+  &__title {
+    font-size: 50px;
+    line-height: 56px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: "CleanvertisingLight", Arial, Tahoma, sans-serif;
+    font-weight: 700;
+  }
+  &__item {
+    text-align: center;
+    &-image {
+      width: 165px;
+      height: 165px;
+      display: inline-block;
+      border-radius: 50%;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    &-title {
+      font-style: italic;
+      font-family: "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    &-text {
+      margin: 0 auto;
+      text-align: center;
+      float: none;
+      padding: 0 20px;
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+}
+.hr {
+  width: 80px;
+  height: 1px;
+  background-color: #cea380;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.owl-prev {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '<';
+    font-size: 100px;
+    line-height: 100px;
+    bottom: 50%;
+    left: 0;
+    font-weight: 300;
+    opacity: 0.5;
+  }
+}
+.owl-next {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '>';
+    font-size: 100px;
+    line-height: 100px;
+    bottom: 50%;
+    right: 0;
+    font-weight: 300;
+    opacity: 0.5;
+  }
+}
+.apply-content {
+  color: $white;
+  background: $red url('../img/bg_apply.png') no-repeat top center;
+  padding: 40px 5px;
+  &__title {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+    background-color: rgba(255,255,255, .13);
+    padding: 20px 0;
+  }
+}
+
+.contacts-line {
+  text-align: center;
+  padding: 40px 5px 0 5px;
+  &__title {
+    color: $black;
+    padding: 0 10px 0 10px;
+    font-size: 50px;
+    line-height: 56px;
+    margin-bottom: 50px;
+    font-family: "CleanvertisingLight", Arial, Tahoma, sans-serif;
+    text-align: center;
+    margin: 0 25px 0 0;
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 45px;
+  }
+  &__tabs {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+  }
+  &__tab-content {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  &__tab-item {
+    padding-top: 5px;
+    opacity: 0.7;
+    &--text {
+      padding: 0 60px;
+    }
+  }
+}
+
+.map-container {
+  margin-top: 20px;
+  min-height: 480px;
+  background-color: #fff;
+}
