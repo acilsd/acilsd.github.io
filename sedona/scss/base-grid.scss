@@ -1,0 +1,46 @@
+@import "components/_variables.scss";
+body {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans", arial, sans-serif;
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+}
+
+* {
+  box-sizing: border-box;
+  &::after {
+    box-sizing: inherit;
+  }
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
+.main-wrapper {
+  min-width: 320px;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  min-height: 595px;
+}
+
+@media only screen and (min-width: 556px) and (max-width: 768px)  {
+  .main-wrapper {
+    min-width: 556px;
+    max-width: 768px;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+  }
+}
+@media only screen and (min-width: 769px) {
+  .main-wrapper {
+    min-width: 800px;
+    max-width: 1180px;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+  }
+}

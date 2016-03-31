@@ -1,0 +1,56 @@
+.intro-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 0;
+  color: $white;
+  height: 390px;
+  padding: 13% 0 15%;
+  z-index: 1;
+  background: $white url("../img/photo-background@1x.jpg") no-repeat 50% 25%;
+  @media only screen and (min-width: 555px) {
+    min-height: 510px;
+    padding: 0;
+    justify-content: center;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background: url("../img/mask@1200.png") no-repeat 50%;
+    top: 44.51%;
+    left: 0;
+  }
+}
+.intro-content__text--welcome {
+  width: 80%;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+.intro-content__text--sedona {
+  width: 87.5%;
+  @media only screen and (min-width: 555px) {
+    width: 50%;
+    margin-bottom: 5%;
+  }
+  @media only screen and (min-width: 556px) and (max-width: 768px) {
+    width: 60%;
+  }
+}
+.intro-content__text--because {
+  width: 61.6%;
+  @media only screen and (min-width: 555px) {
+    width: 35%;
+  }
+  @media only screen and (min-width: 556px) and (max-width: 768px) {
+    width: 45%;
+  }
+}
