@@ -7,7 +7,7 @@
   width: 100%;
   background-color: $white;
   justify-content: center;
-  @media only screen and (min-width: 555px) {
+  @media only screen and (min-width: 769px) {
     width: 50%;
     margin: 0 auto;
   }
@@ -20,11 +20,9 @@
     align-items: center;
     flex-wrap: nowrap;
     width: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-bottom: 30px;
+    padding: 25px;
     animation: show-animation 0.8s;
-    @media only screen and (min-width: 555px) {
+    @media only screen and (min-width: 769px) {
       position: absolute;
       background-color: $white;
       z-index: 100;
@@ -34,96 +32,40 @@
     }
   }
 }
+
 .search-form {
   width: 100%;
   position: relative;
-  &__input-label {
-    display: block;
+  &__label {
+    flex-grow: 1;
     text-align: left;
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 1rem;
+    padding: 2px 0;
     margin-bottom: 5px;
-    margin-top: 10px;
-    @media only screen and (min-width: 555px) {
-      margin: 0;
-      flex-grow: 1;
-      font-size: 1rem;
-    }
-    @media only screen and (min-width: 556px) and (max-width: 768px)  {
-      font-size: 12px;
-    }
+    font-weight: 700;
   }
-  &__input-date {
-    display: block;
-    position: relative;
-    width: 80%;
-    outline: none;
-    text-transform: uppercase;
-    font-family: inherit;
-    font-size: 12px;
-    background-color: $gray;
+  &__input {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 26px;
+    font-weight: 700;
+    padding: 5px 10px;
     color: $gray-text;
     border: none;
-    padding: 5px 30px;
-    margin-bottom: 20px;
-    @media only screen and (min-width: 555px) {
-      margin: 0;
-      flex-grow: 1;
-      font-size: 1rem;
-    }
-    @media only screen and (min-width: 556px) and (max-width: 768px)  {
-      font-size: 12px;
-    }
-    &:focus {
-      color: $blue-active;
-    }
-  }
-}
-.search-form__controls {
-  margin-bottom: 20px;
-  text-align: center;
-  @media only screen and (min-width: 555px) {
-    margin-bottom: 0;
-    text-align: left;
-  }
-  &--minus,
-  &--plus {
+    outline: none;
+    text-transform: inherit;
     background-color: $gray;
-    color: $gray-text;
-    &:hover {
-      opacity: 0.5;
+    &:focus {
+      background-color: $blue-active;
     }
-    &:active {
-      opacity: 0.3;
-    }
+  }
+  &__counter {
+    @extend .search-form__input;
+    width: 30%;
+    text-align: center;
   }
 }
-.search-form__counter {
-  display: inline-block;
-  margin: 0;
-  width: 50px;
-  height: 25px;
-  font-size: 12px;
-  padding: 5px 10px;
-  border: none;
-  outline: none;
-  background-color: $gray;
-  color: $gray-text;
-  text-align: center;
-  @media only screen and (min-width: 555px) {
-    font-size: 1rem;
-    color: $black;
-    width: 40%;
-  }
-  @media only screen and (min-width: 556px) and (max-width: 768px)  {
-    font-size: 12px;
-  }
 
-  &:focus {
-    background-color: $blue;
-    color: $white;
-  }
-}
 @keyframes show-animation {
   0% { transform: translateY(-300px); }
   70% { transform: translateY(30px); }
@@ -131,22 +73,26 @@
   100% { transform: translateY(0); }
 }
 
-@media only screen and (min-width: 555px) {
-  .input-container {
+.input-container {
+  display: flex;
+  margin-bottom: 15px;
+  flex-direction: column;
+  &__item {
+    flex-grow: 3;
+  }
+  &__counter {
+    flex-grow: 2;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 30px;
-    justify-content: space-between;
-    &--controls {
-      display: flex;
-      flex-grow: 1;
-      @media only screen and (min-width: 556px) and (max-width: 768px)  {
-        flex-direction: column;
-      }
-      & .search-form__input-label {
-        flex-grow: 0;
-        margin-right: 5%;
-      }
-    }
+    align-items: center;
+    padding: 0 0 0 5%;
+  }
+}
+.counter-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+  & .search-form__label {
+    flex-grow: 0;
+    min-width: 30%;
   }
 }

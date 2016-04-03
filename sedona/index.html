@@ -5,21 +5,22 @@
     <title>Sedona</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   </head>
   <body>
 
     <div class="main-wrapper">
+
       <header class="main-header">
         <a href="#" class="toggler" id="toggler"><span></span></a>
         <ul class="main-navigation" id="nav">
           <li class="main-navigation__item"><a href="#">Карта штата</a></li>
           <li class="main-navigation__item"><a href="#">Информация</a></li>
-          <li class="main-navigation__item-logo"><a href="#"><img src="img/logo-sedona.png" width="138px" height="70px" alt=""></a></li>
+          <li class="main-navigation__item-logo"><a href="#"><img src="img/logo-sedona.png" width="138" height="70" alt=""></a></li>
           <li class="main-navigation__item"><a href="#">Фото и видео</a></li>
           <li class="main-navigation__item"><a href="#">Гостиницы</a></li>
         </ul>
-        <a class="main-navigation__item-logo--mobile" href="#"><img src="img/logo-sedona.png" width="138px" height="70px" alt=""></a>
+        <a class="main-navigation__item-logo--mobile" href="#"><img src="img/logo-sedona.png" width="138" height="70" alt=""></a>
+
       </header>
 
       <div class="intro-content">
@@ -35,10 +36,12 @@
         </div>
       </div>
 
+
       <div class="intro-description">
         <p class="intro-description__text--big">Седона - небольшой городок в Аризоне, заслуживающий большего</p>
         <p class="intro-description__text--small">Рассмотрим 5 причин, по которым седона круче чем гранд каньон!</p>
       </div>
+
 
       <div class="main-content">
 
@@ -61,7 +64,7 @@
           <section class="feature-description">
             <div class="feature-description__icon"><img src="img/icon-gift.svg" alt=""></div>
             <h2 class="feature-description__title">Сувениры</h2>
-            <p class="feature-description__text">Lorem ipsum dolor sit amet, consectetur. Lorem!</p>
+            <p class="feature-description__text">Lorem ipsum dolor sit amet, consectetur!</p>
           </section>
 
           <section class="feature-description">
@@ -113,41 +116,54 @@
               <form class="search-form" action="#" method="post">
 
                 <div class="input-container">
-                  <label class="search-form__input-label" for="search-form__arrival-date">Заезд:</label>
-                  <input id="search-form__arrival-date" class="search-form__input-date" type="date"   required="" placeholder="Выберите дату" name="arrival-date"></input>
+                   <label  class="search-form__label" for="arrival-date">Дата заезда:</label>
+                   <div class="input-container__item">
+                     <input class="search-form__input" name="arrival-date" id="arrival-date"  type="date" value="" required>
+                   </div>
                 </div>
 
                 <div class="input-container">
-                  <label class="search-form__input-label" for="search-form__departure-date">Выезд:</label>
-                  <input id="search-form__departure-date" class="search-form__input-date" type="date"   required="" placeholder="Выберите дату" name="departure-date"></input>
+                   <label  class="search-form__label" for="departure-date">Дата отъезда:</label>
+                   <div class="input-container__item">
+                     <input class="search-form__input" name="departure-date" id="departure-date"  type="date" value="" required>
+                   </div>
                 </div>
 
                 <div class="input-container">
-                  <div class="input-container--controls">
-                    <label class="search-form__input-label"   for="search-form__adult-counter">Взрослые:</label>
-                    <div class="search-form__controls">
-                      <a class="search-form__controls--minus" href="#"><i class="icon-down-dir"></i></a>
-                      <input id="search-form__adult-counter" class="search-form__counter" type="text"     value="2" name="adults"></input>
-                      <a class="search-form__controls--plus" href="#"><i class="icon-up-dir"></i></a>
-                    </div>
+                  <div class="counter-group">
+                   <label  class="search-form__label" for="adults">Взрослые:</label>
+                   <div class="input-container__counter">
+                      <a href="#"><i class="icon-up-dir"></i></a>
+                      <input class="search-form__counter" name="adults" id="adults" type="number">
+                      <a href="#"><i class="icon-down-dir"></i></a>
+                   </div>
                   </div>
-                  <div class="input-container--controls">
-                    <label class="search-form__input-label"   for="search-form__children-counter">Дети:</label>
-                    <div class="search-form__controls">
-                      <a class="search-form__controls--minus" href="#"><i class="icon-down-dir"></i></a>
-                      <input id="search-form__children-counter" class="search-form__counter" type="text"     value="2" name="children"></input>
-                      <a class="search-form__controls--plus" href="#"><i class="icon-up-dir"></i></a>
-                    </div>
+
+                  <div class="counter-group">
+                   <label  class="search-form__label" for="child">Дети:</label>
+                   <div class="input-container__counter">
+                      <a href="#"><i class="icon-up-dir"></i></a>
+                      <input class="search-form__counter" name="child" id="child" type="number">
+                      <a href="#"><i class="icon-down-dir"></i></a>
+                   </div>
                   </div>
                 </div>
+
+
+
 
                 <input class="search-btn-submit" type="submit" value="Найти" name="form-search-submit">
               </form>
+
           </div>
+
         </div>
 
+
         <div id="yandex-map" class="map-container"></div>
+
       </div>
+
 
       <footer class="main-footer">
         <a class="slogan-logo" href="#">#VisitSedona</a>
@@ -161,8 +177,9 @@
           <a class="legal-btn--name" href="#">for </a>
         </div>
       </footer>
-    </div>
 
+
+    </div>
     <script type="text/javascript" src="js/js.js"></script>
     <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=1AUPJxJLIgbQsBP0pQyy80oJLdX_vFkV&width=100%&height=595&lang=ru_RU&sourceType=constructor&id=yandex-map"></script>
   </body>
