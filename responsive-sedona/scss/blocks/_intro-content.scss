@@ -22,8 +22,11 @@
     width: 100%;
     z-index: 100;
     background: url("../img/mask@1200.png") no-repeat 50%;
-    top: 44.51%;
+    top: 42.6%;
     left: 0;
+    @media only screen and (min-width: 555px) {
+      top: 44.51%;
+    }
   }
 }
 .intro-content__text--welcome {
