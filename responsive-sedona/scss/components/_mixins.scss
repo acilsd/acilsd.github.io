@@ -1,0 +1,12 @@
+@mixin social-btn-props-mobile {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  margin-right: 5px;
+  font-size: $fs-mobile;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  background-color: $blue;
+  color: $white;
+}

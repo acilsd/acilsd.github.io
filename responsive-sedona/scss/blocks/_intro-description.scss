@@ -1,0 +1,40 @@
+.intro-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 240px;
+  background: $white;
+  padding: 10% 5%;
+  @media only screen and (min-width: 769px) {
+    min-height: 220px;
+    padding: 2% 20%;
+    justify-content: center;
+  }
+  &__text--big {
+    font-weight: normal;
+    text-align: center;
+    font-size: $fs-mobile;
+    @media only screen and (min-width: 769px) {
+      font-weight: 700;
+      font-size: $fs-tablet-title;
+      line-height: 26px;
+    }
+    @media only screen and (min-width: 556px) and (max-width: 768px) {
+      font-size: $fs-tablet-title;
+      line-height: 21px;
+      font-weight: normal;
+    }
+  }
+  &__text--small {
+    text-align: center;
+    color: $gray-text;
+    font-size: 1rem;
+    @media only screen and (min-width: 769px) {
+      color: $black;
+      line-height: 26px;
+    }
+    @media only screen and (min-width: 556px) and (max-width: 768px) {
+      line-height: 21px;
+    }
+  }
+}

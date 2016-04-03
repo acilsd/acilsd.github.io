@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sedona</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+
+    <div class="main-wrapper">
+
+      <header class="main-header">
+        <a href="#" class="toggler" id="toggler"><span></span></a>
+        <ul class="main-navigation" id="nav">
+          <li class="main-navigation__item"><a href="#">Карта штата</a></li>
+          <li class="main-navigation__item"><a href="#">Информация</a></li>
+          <li class="main-navigation__item-logo"><a href="#"><img src="img/logo-sedona.png" width="138" height="70" alt=""></a></li>
+          <li class="main-navigation__item"><a href="#">Фото и видео</a></li>
+          <li class="main-navigation__item"><a href="#">Гостиницы</a></li>
+        </ul>
+        <a class="main-navigation__item-logo--mobile" href="#"><img src="img/logo-sedona.png" width="138" height="70" alt=""></a>
+
+      </header>
+
+      <div class="intro-content">
+        <div class="intro-content__text--welcome">
+          <object type="image/svg+xml" data="img/intro-welcome.svg"></object>
+          <object type="image/svg+xml" data="img/intro-gorgeous.svg"></object>
+        </div>
+        <div class="intro-content__text--sedona">
+          <object type="image/svg+xml" data="img/intro-sedona.svg"></object>
+        </div>
+        <div class="intro-content__text--because">
+          <object type="image/svg+xml" data="img/intro-because.svg"></object>
+        </div>
+      </div>
+
+
+      <div class="intro-description">
+        <p class="intro-description__text--big">Седона - небольшой городок в Аризоне, заслуживающий большего</p>
+        <p class="intro-description__text--small">Рассмотрим 5 причин, по которым седона круче чем гранд каньон!</p>
+      </div>
+
+
+      <div class="main-content">
+
+        <section class="content-feature">
+          <div class="content-feature__text">
+            <h2 class="content-feature__text-item--title">Настоящий городок</h2>
+            <p class="content-feature__text-item">— №1 —</p>
+            <p class="content-feature__text-item">Lorem ipsum dolor sit amet... Lorem ipsum.</p>
+          </div>
+          <div class="content-feature__background"></div>
+        </section>
+
+        <div class="feature-container">
+          <section class="feature-description">
+            <div class="feature-description__icon"><img src="img/icon-house.svg" alt=""></div>
+            <h2 class="feature-description__title">Жилье</h2>
+            <p class="feature-description__text">Lorem ipsum dolor sit amet, consectetur!</p>
+          </section>
+
+          <section class="feature-description">
+            <div class="feature-description__icon"><img src="img/icon-gift.svg" alt=""></div>
+            <h2 class="feature-description__title">Сувениры</h2>
+            <p class="feature-description__text">Lorem ipsum dolor sit amet, consectetur!</p>
+          </section>
+
+          <section class="feature-description">
+            <div class="feature-description__icon"><img src="img/icon-house.svg" alt=""></div>
+            <h2 class="feature-description__title">Жилье</h2>
+            <p class="feature-description__text">Lorem ipsum dolor sit amet, consectetur!</p>
+          </section>
+        </div>
+
+        <section class="content-feature">
+          <div class="content-feature__text">
+            <h2 class="content-feature__text-item--title">Там есть мост дьявола</h2>
+            <p class="content-feature__text-item">— №2 —</p>
+            <p class="content-feature__text-item">Lorem ipsum dolor sit amet! Lorem ipsum?</p>
+          </div>
+          <div class="content-feature__background--second"></div>
+        </section>
+
+        <div class="promo-container">
+          <section class="promo-feature">
+            <h2 class="promo-feature__title">Lorem dolor.</h2>
+            <p class="promo-feature__text">— №3 —</p>
+            <p class="promo-feature__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </section>
+
+          <section class="promo-feature">
+            <h2 class="promo-feature__title">Lorem ipsum.</h2>
+            <p class="promo-feature__text">— №4 —</p>
+            <p class="promo-feature__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </section>
+
+          <section class="promo-feature">
+            <h2 class="promo-feature__title">Dolor amet.</h2>
+            <p class="promo-feature__text">— №5 —</p>
+            <p class="promo-feature__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </section>
+        </div>
+
+        <section class="promo-proposal">
+          <h2 class="promo-proposal__title">Заинтересовались?</h2>
+          <p class="promo-proposal__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, nihil.</p>
+        </section>
+
+        <div class="search-content">
+          <button class="search-btn" id="show-button">Поиск гостиницы в седоне</button>
+
+            <div class="modal-form" id="form">
+
+              <form class="search-form" action="#" method="post">
+
+                <div class="input-container">
+                   <label  class="search-form__label" for="arrival-date">Дата заезда:</label>
+                   <div class="input-container__item">
+                     <input class="search-form__input" name="arrival-date" id="arrival-date"  type="date" value="" required>
+                   </div>
+                </div>
+
+                <div class="input-container">
+                   <label  class="search-form__label" for="departure-date">Дата отъезда:</label>
+                   <div class="input-container__item">
+                     <input class="search-form__input" name="departure-date" id="departure-date"  type="date" value="" required>
+                   </div>
+                </div>
+
+                <div class="input-container">
+                  <div class="counter-group">
+                   <label  class="search-form__label" for="adults">Взрослые:</label>
+                   <div class="input-container__counter">
+                      <a href="#"><i class="icon-up-dir"></i></a>
+                      <input class="search-form__counter" name="adults" id="adults" type="number">
+                      <a href="#"><i class="icon-down-dir"></i></a>
+                   </div>
+                  </div>
+
+                  <div class="counter-group">
+                   <label  class="search-form__label" for="child">Дети:</label>
+                   <div class="input-container__counter">
+                      <a href="#"><i class="icon-up-dir"></i></a>
+                      <input class="search-form__counter" name="child" id="child" type="number">
+                      <a href="#"><i class="icon-down-dir"></i></a>
+                   </div>
+                  </div>
+                </div>
+
+
+
+
+                <input class="search-btn-submit" type="submit" value="Найти" name="form-search-submit">
+              </form>
+
+          </div>
+
+        </div>
+
+
+        <div id="yandex-map" class="map-container"></div>
+
+      </div>
+
+
+      <footer class="main-footer">
+        <a class="slogan-logo" href="#">#VisitSedona</a>
+        <div class="social-btn">
+          <a class="social-btn--twitter" href="#"><i class="icon-tumblr"></i></a>
+          <a class="social-btn--fb" href="#"><i class="icon-facebook"></i></a>
+          <a class="social-btn--ytb" href="#"><i class="icon-gplus"></i></a>
+        </div>
+        <div class="legal-btn">
+          <a class="legal-btn--academy" href="#">website by </a>
+          <a class="legal-btn--name" href="#">for </a>
+        </div>
+      </footer>
+
+
+    </div>
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=1AUPJxJLIgbQsBP0pQyy80oJLdX_vFkV&width=100%&height=595&lang=ru_RU&sourceType=constructor&id=yandex-map"></script>
+  </body>
+</html>
