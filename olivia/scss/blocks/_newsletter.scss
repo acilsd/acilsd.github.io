@@ -1,0 +1,66 @@
+.newsletter {
+  width: 100%;
+  color: $white;
+  background-color: $pink;
+  background: linear-gradient(to right, $gr-blue, $gr-pink);
+  padding: 100px;
+  text-align: center;
+  &__title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: $fs-title-big;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+    &-input {
+      flex-grow: 2;
+      margin-right: 1%;
+      background-color: transparent;
+      outline: none;
+      border: 2px solid $white;
+      border-radius: 5px;
+      color: $white;
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 600;
+      padding: 10px 60px;
+      vertical-align: middle;
+      position: relative;
+      background: transparent url("../img/icon-mail.png") no-repeat;
+      background-position: 2% 50%;
+      &::placeholder {
+        color: $white;
+        font-weight: 600;
+        text-transform: capitalize;
+        vertical-align: middle;
+        font-size: 1rem;
+        line-height: 1rem;
+      }      
+      &:focus {
+        border: 2px solid $blue;
+      }
+    }
+    &-sub {
+      flex-grow: 1;
+      background-color: $pink;
+      background: linear-gradient(to right, $gr-blue, $gr-pink);
+      border-radius: 5px;
+      outline: none;
+      border: 2px solid $white;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1rem;
+      &:hover {
+        cursor: pointer;
+        border: 2px solid $blue;
+      }
+    }
+  }
+}

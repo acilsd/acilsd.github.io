@@ -1,0 +1,74 @@
+.features {
+  width: 100%;
+  color: $black;
+  background: $white url("../img/bg-features.jpg") no-repeat top center;
+  background-size: cover;
+  &-description {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 15px;
+    &__title {
+      font-size: $fs-title-big;
+      line-height: 3.75rem;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+    &__text {
+      line-height: 1.875rem;
+      margin-top: 20px;
+    }
+  }
+  &-content {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    &__item {
+      padding: 0 40px 120px 40px;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      flex-basis: 33%;
+      p {
+        line-height: $fs-title;
+        width: 100%;
+      }
+      &-icon--contacts,
+      &-icon--music,
+      &-icon--gallery {
+        width: 129px;
+        height: 129px;
+        background: url("../img/sprite-assets.png") no-repeat center;
+      }
+      &-icon--contacts {
+        background-position: -143px -5px;
+        transition-delay: 0.3s;
+        &:hover {
+          background-position: -5px -5px;
+        }
+      }
+      &-icon--music {
+        background-position: -697px -5px;
+        transition-delay: 0.3s;
+        &:hover {
+          background-position: -559px -5px;
+        }
+      }
+      &-icon--gallery {
+        background-position: -281px -5px;
+        transition-delay: 0.3s;
+        &:hover {
+          background-position: -420px -5px;
+        }
+      }
+      &-title {
+        font-size: $fs-title;
+        line-height: $fs-title;
+        font-weight: 600;
+        margin: 30px 0;
+      }
+    }
+  }
+}

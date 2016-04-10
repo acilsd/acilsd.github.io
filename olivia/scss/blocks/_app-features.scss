@@ -1,0 +1,64 @@
+.app-features {
+  width: 100%;
+  color: $white;
+  background-color: $pink;
+  background: linear-gradient(to right, $gr-blue, $gr-pink);
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding-top: 90px;
+    font-size: $fs-title-big;
+    font-weight: 400;
+  }
+  &__content {
+    display: flex;
+    position: relative;
+    margin-top: 90px;
+    &-text {
+      flex-basis: 50%;
+      display: flex;
+      flex-flow: column wrap;
+      padding: 0px 70px 90px 70px;
+      &-title--clock,
+      &-title--rocket,
+      &-title--shape {
+        font-size: $fs-title-sub;
+        line-height: 24px;
+        margin: 0;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: '';
+          display: block;
+          background: transparent url("../img/sprite-icons.png") no-repeat;
+          background-position: -5px -5px;
+          width: 36px;
+          height: 36px;
+          left: -15%;
+          top: 200%;
+        }
+      }
+      &-title--rocket::before {
+        width: 37px;
+        height: 37px;
+        background-position: -92px -5px;
+      }
+      &-title--shape::before {
+        width: 40px;
+        height: 40px;
+        background-position: -139px -5px;
+      }
+      p {
+        margin-bottom: 40px;
+      }
+    }
+    & img {
+      flex-basis: 50%;
+      position: absolute;
+    
+      bottom: 0;
+      height: 100%;
+      width: 50%;
+    }
+  }
+}

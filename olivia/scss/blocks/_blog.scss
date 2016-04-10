@@ -1,0 +1,72 @@
+.blog {
+  width: 100%;
+  color: $black;
+  background: $white url("../img/bg-blog.jpg") no-repeat top center;
+  background-size: cover;
+  padding: 100px 0;
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: $fs-title-big;
+    line-height: $fs-title-big;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  &-posts {
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 50px;
+    width: 100%;
+    &__item {
+      width: 50%;
+      display: flex;
+      padding: 0 2% 2% 0;
+      margin-bottom: 20px;
+    }
+    &__date {
+      background-color: $pink;
+      color: $white;
+      height: 100px;
+      width: 70px;
+      padding: 2px;
+      text-align: center;
+      position: relative;
+      text-transform: capitalize;
+      flex-shrink: 0;
+      & strong {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+        font-weight: 600;
+      }
+      &::after,
+      &::before {
+        border-left: 10px solid $pink;
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        top: 10%;
+        right: -20px;
+        content: '';
+        position: absolute;
+      }
+    }
+    &__text {
+      font-size: 0.875rem;
+      line-height: $fs-title-sub;
+      padding: 0 5px 0 20px;
+      &--link {
+        text-decoration: none;
+        color: $black;
+        opacity: 0.8;
+        margin-left: -5px;
+      }
+    }
+    &__title {
+      margin: 0;
+      font-size: $fs-bigger;
+      line-height: $fs-bigger;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.main-footer {
+  width: 100%;
+  color: $white;
+  background-color: $pink;
+  background: linear-gradient(to right, $gr-pink, $gr-blue);
+  padding: 100px 50px 50px 50px;
+  text-align: center;
+  line-height: 2rem;
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: $fs-title-big;
+    line-height: $fs-title-big;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 45px;
+    margin-bottom: 25px;
+    &-input-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 13px;
+    }
+    &-input {
+      width: 257px;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $black;
+      padding: 10px 15px;
+      outline: none;
+      border: 1px solid transparent;
+      vertical-align: middle;
+      &::placeholder {
+        color: $black;
+        text-transform: capitalize;
+      }
+      &:focus {
+        border: 1px solid $blue;
+      }
+    }
+    &-text {
+      width: 100%;
+      min-height: 150px;
+      outline: none;
+      border: 1px solid transparent;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $black;
+      padding: 10px;
+      &::placeholder {
+        color: $black;
+        text-transform: capitalize;
+      }
+      &:focus {
+        border: 1px solid $blue;
+      }
+    }
+  }
+  &__legal {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 5%;
+    text-transform: capitalize;
+    opacity: 0.8;
+  }
+}

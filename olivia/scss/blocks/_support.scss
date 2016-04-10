@@ -1,0 +1,80 @@
+.support {
+  width: 100%;
+  color: $black;
+  background-color: $white;
+  padding: 130px 0;
+  &__title {
+    font-size: $fs-title-big;
+    line-height: $fs-title-big;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    text-transform: capitalize;
+  }
+  &__contacts {
+    font-size: $fs-title;
+    line-height: $fs-title;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 55px;
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 10px 0;
+    &__column {
+      display: flex;
+      padding: 0 50px;
+      margin-bottom: 50px;
+    }
+  }
+  &__personal {
+    display: flex;
+    justify-content: space-around;
+    text-align: right;
+    flex-basis: 50%;
+    &--right {
+      display: flex;
+      justify-content: space-around;
+      text-align: left;
+      flex-basis: 50%;
+    }
+    &-avatar {
+      width: 190px;
+      height: 190px;
+      background-color: $black;
+      position: relative;
+      background: linear-gradient($pink, $blue);
+      border-radius: 50%;
+      &--first::after {
+        @include person;
+        background-position: -30px -30px;
+      }
+      &--second::after {
+        @include person;
+        background-position: -45px -275px;
+      }
+      &--third::after {
+        @include person;
+        background-position: -45px -539px;
+      }
+      &--fourth::after {
+        @include person;
+        background-position: -68px -855px;
+      }
+    }
+    &-text {
+      flex-basis: 50%;
+      &--title {
+        font-size: $fs-bigger;
+        line-height: $fs-title-sub;
+        font-weight: 600;
+        margin: 0;
+        text-transform: uppercase;
+      }
+      &--intro {
+        margin: 0 0 5px;
+      }
+    }
+  }
+}

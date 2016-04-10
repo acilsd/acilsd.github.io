@@ -1,0 +1,15 @@
+.screenshots {
+  width: 100%;
+  color: $black;
+  background: $white url("../img/bg-screenshots.jpg") no-repeat top center;
+  background-size: cover;
+  padding: 120px 0;
+  &__title {
+    text-align: center;
+    font-size: $fs-title-big;
+    line-height: $fs-title-big;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 110px;
+  }
+}

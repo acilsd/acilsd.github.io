@@ -1,0 +1,29 @@
+.quotions {
+  width: 100%;
+  color: $white;
+  background-color: $pink;
+  background: linear-gradient(to right, $gr-pink, $gr-blue);
+  padding: 130px 0 50px 0;
+  &__slider {
+    display: flex;
+    width: 100%;
+    &-img {
+      width: 250px;
+      height: 250px;
+      background: $white url("../img/sprite-no-borders.png") no-repeat center;
+      border: 5px solid $white;
+      border-radius: 50%;
+      &--first {
+        background-position: -39px -1132px;
+      }
+    }
+    &-text {
+      padding: 0 6%;
+      flex-basis: 80%;
+      &--name {
+        margin-top: 50px;
+        font-size: $fs-bigger;
+      }
+    }
+  }
+}
