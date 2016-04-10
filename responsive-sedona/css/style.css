@@ -1092,9 +1092,9 @@ body {
 .intro-content {
 	min-height: 510px;
 	padding: 0;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
 }
 
 .intro-content::after {

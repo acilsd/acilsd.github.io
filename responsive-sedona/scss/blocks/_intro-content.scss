@@ -13,7 +13,7 @@
   @media only screen and (min-width: 555px) {
     min-height: 510px;
     padding: 0;
-    justify-content: center;
+    justify-content: space-around;
   }
   &::after {
     position: absolute;
@@ -40,7 +40,7 @@
 .intro-content__text--sedona {
   width: 87.5%;
   @media only screen and (min-width: 555px) {
-    width: 50%;  
+    width: 50%;
   }
   @media only screen and (min-width: 556px) and (max-width: 768px) {
     width: 60%;
