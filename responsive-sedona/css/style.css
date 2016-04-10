@@ -499,7 +499,7 @@ body {
 	z-index: 0;
 	color: #fff;
 	height: 390px;
-	padding: 13% 0 15%;
+	padding: 20px 0;
 	z-index: 1;
 	background: #fff url("../img/photo-background@1x.jpg") no-repeat 50% 25%;
 }
@@ -1091,7 +1091,7 @@ body {
 
 .intro-content {
 	min-height: 510px;
-	padding: 0;
+	padding: 20px 0;
 	-webkit-justify-content: space-around;
 	-ms-flex-pack: distribute;
 	justify-content: space-around;

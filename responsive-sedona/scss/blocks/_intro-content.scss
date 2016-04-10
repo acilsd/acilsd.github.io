@@ -7,12 +7,12 @@
   z-index: 0;
   color: $white;
   height: 390px;
-  padding: 13% 0 15%;
+  padding: 20px 0;
   z-index: 1;
   background: $white url("../img/photo-background@1x.jpg") no-repeat 50% 25%;
   @media only screen and (min-width: 555px) {
     min-height: 510px;
-    padding: 0;
+    padding: 20px 0;
     justify-content: space-around;
   }
   &::after {
