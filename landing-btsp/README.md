@@ -1,4 +1,4 @@
-#bootstrap
+#Bootstrap based responsive Landing Page
 
 Simple bootstrap LP
 
