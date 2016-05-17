@@ -1,6 +1,5 @@
-#bootstrap shit
-Prosto kucha govna sleplennaya vmeste s jq der'mom
+#bootstrap
 
-Zachem?
+Simple bootstrap LP
 
-Potomu chto mne nechego bilo delat :3
+Added some jq plugins to test perfomance
