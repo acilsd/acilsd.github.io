@@ -1,0 +1,15 @@
+@media (min-resolution: 2dppx) {
+  .intro-content {
+    background: $white url("../img/retina/photo-background@2x.jpg") no-repeat 60% 30%;
+  }
+
+  .content-feature__background {
+    background: url("../img/retina/photo-city@2x.jpg") no-repeat 20% 10%;
+    background-size: cover;
+    &--second {
+      background: url("../img/retina/photo-bridge@2x.jpg") no-repeat 20% 10%;
+      background-size: cover;
+    }
+  }
+  
+}

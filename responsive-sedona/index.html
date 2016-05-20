@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Sedona</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
 
@@ -15,23 +15,29 @@
         <ul class="main-navigation" id="nav">
           <li class="main-navigation__item"><a href="#">Карта штата</a></li>
           <li class="main-navigation__item"><a href="#">Информация</a></li>
-          <li class="main-navigation__item-logo"><a href="#"><img src="img/logo-sedona.png" width="138" height="70" alt=""></a></li>
+          <li class="main-navigation__item-logo">
+            <a href="#">
+              <img src="img/logo-sedona.png" width="138" height="70" alt="logo">
+            </a>
+          </li>
           <li class="main-navigation__item"><a href="#">Фото и видео</a></li>
           <li class="main-navigation__item"><a href="#">Гостиницы</a></li>
         </ul>
-        <a class="main-navigation__item-logo--mobile" href="#"><img src="img/logo-sedona.png" width="138" height="70" alt=""></a>
+        <a class="main-navigation__item-logo--mobile" href="#">
+          <img src="img/logo-sedona.png" width="138" height="70" alt="logo">
+        </a>
 
       </header>
 
       <div class="intro-content">
-        <div class="intro-content__text--welcome">
+        <div class="intro-content__welcome">
           <object type="image/svg+xml" data="img/intro-welcome.svg"></object>
           <object type="image/svg+xml" data="img/intro-gorgeous.svg"></object>
         </div>
-        <div class="intro-content__text--sedona">
+        <div class="intro-content__sedona">
           <object type="image/svg+xml" data="img/intro-sedona.svg"></object>
         </div>
-        <div class="intro-content__text--because">
+        <div class="intro-content__because">
           <object type="image/svg+xml" data="img/intro-because.svg"></object>
         </div>
       </div>
@@ -116,40 +122,32 @@
               <form class="search-form" action="#" method="post">
 
                 <div class="input-container">
-                   <label  class="search-form__label" for="arrival-date">Дата заезда:</label>
-                   <div class="input-container__item">
-                     <input class="search-form__input" name="arrival-date" id="arrival-date"  type="date" value="" required>
-                   </div>
+                  <label  class="search-form__label" for="arrival-date">Дата заезда:</label>
+                  <input class="search-form__input" name="arrival-date" id="arrival-date"  type="date" value="" required>
                 </div>
 
                 <div class="input-container">
-                   <label  class="search-form__label" for="departure-date">Дата отъезда:</label>
-                   <div class="input-container__item">
-                     <input class="search-form__input" name="departure-date" id="departure-date"  type="date" value="" required>
-                   </div>
+                  <label  class="search-form__label" for="departure-date">Дата отъезда:</label>
+                  <input class="search-form__input" name="departure-date" id="departure-date"  type="date" value="" required>
                 </div>
 
                 <div class="input-container">
-                  <div class="counter-group">
-                   <label  class="search-form__label" for="adults">Взрослые:</label>
-                   <div class="input-container__counter">
+
+                   <div class="counter-group">
+                      <label  class="search-form__label--counter" for="adults">Взрослые:</label>
                       <a href="#"><i class="icon-up-dir"></i></a>
                       <input class="search-form__counter" name="adults" id="adults" type="number">
                       <a href="#"><i class="icon-down-dir"></i></a>
                    </div>
-                  </div>
 
-                  <div class="counter-group">
-                   <label  class="search-form__label" for="child">Дети:</label>
-                   <div class="input-container__counter">
+                   <div class="counter-group">
+                      <label  class="search-form__label--counter" for="child">Дети:</label>
                       <a href="#"><i class="icon-up-dir"></i></a>
                       <input class="search-form__counter" name="child" id="child" type="number">
                       <a href="#"><i class="icon-down-dir"></i></a>
                    </div>
-                  </div>
+
                 </div>
-
-
 
 
                 <input class="search-btn-submit" type="submit" value="Найти" name="form-search-submit">
@@ -180,7 +178,7 @@
 
 
     </div>
-    <script type="text/javascript" src="js/js.js"></script>
-    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=1AUPJxJLIgbQsBP0pQyy80oJLdX_vFkV&width=100%&height=595&lang=ru_RU&sourceType=constructor&id=yandex-map"></script>
+    <script src="js/main.js"></script>
+    <script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=1AUPJxJLIgbQsBP0pQyy80oJLdX_vFkV&width=100%&height=595&lang=ru_RU&sourceType=constructor&id=yandex-map"></script>
   </body>
 </html>

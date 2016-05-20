@@ -1,15 +1,22 @@
-@import "components/_normalize.min.scss";
-@import "components/_variables.scss";
-@import "base-grid.scss";
-@import "components/_fonts.scss";
-@import "blocks/_header-nav.scss";
-@import "blocks/_intro-content.scss";
-@import "blocks/_intro-description.scss";
-@import "blocks/_main-content.scss";
-@import "blocks/_content-features.scss";
-@import "blocks/_feature-description.scss";
-@import "blocks/_promo-feature.scss";
-@import "blocks/_promo-proposal.scss";
-@import "blocks/_search-content.scss";
-@import "blocks/_footer.scss";
-@import "components/_buttons.scss";
+@import "components/_normalize.min";
+@import "components/_variables";
+@import "components/_base";
+@import "components/_fonts";
+@import "components/_buttons";
+
+@import "blocks/_header-nav";
+@import "blocks/_intro-content";
+@import "blocks/_intro-description";
+
+@import "blocks/_main-content";
+@import "blocks/_content-features";
+@import "blocks/_feature-description";
+@import "blocks/_promo-feature";
+@import "blocks/_promo-proposal";
+
+@import "blocks/_search-content";
+@import "blocks/_search-form";
+
+@import "blocks/_footer";
+
+@import "components/_retina";

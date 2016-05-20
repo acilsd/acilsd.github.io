@@ -12,7 +12,6 @@
     min-height: 256px;
     border-bottom: none;
     padding: 2%;
-    flex-basis: 33.3%;
   }
   &__title {
     padding-top: 10px;
@@ -32,7 +31,6 @@
     text-align: center;
     color: $black;
     margin: 0;
-    width: 100%;
     @media only screen and (min-width: 555px) {
       margin-bottom: 2%;
     }
