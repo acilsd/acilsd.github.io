@@ -8,4 +8,3 @@ mobile-first
 — Bad logo positioning in IE11+;
 — Form markup is crashing in IE10;
 — Some serious fixes for IE10 still required;
-
