@@ -7,7 +7,7 @@
 .modal-form {
   display: none;
   &--show {
-    display: initial;
+    display: block;
     width: 100%;
     z-index: 100;
     animation: show-animation 0.8s;
