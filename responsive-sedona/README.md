@@ -4,7 +4,7 @@ full responsive,
 mobile-first
 
 #known issues:
-— SVG bug in IE (10, 11 and Edge (lol, well done, microsoft));
+— A lot of SVG bugs in IE (10, 11 and Edge (lol, well done, microsoft));
 
 — Bad logo positioning in IE11+;
 
