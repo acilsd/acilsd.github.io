@@ -1,0 +1,116 @@
+@import "../utils/_variables";
+.main-header {
+  min-height: 640px;
+  background: url("../img/bg_header.jpg") center top;
+  background-size: cover;
+  color: $white;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+.logo {
+  font-size: 40px;
+  font-family: "RobotoBold", Arial, Tahoma, sans-serif;
+  font-weight: 700;
+}
+/*Tabs via jquery, sorry for shitty cascade :D*/
+.top-contacts {
+  text-align: right;
+  & .wrapper .tab {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "RobotoBold", Arial, Tahoma, sans-serif;
+  }
+  & .wrapper .active {
+    text-decoration: underline;
+  }
+  & .tab-item {
+    font-size: 35px;
+    font-weight: 700;
+  }
+}
+.description-tabs {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  .tab-content {
+    background-color: rgba(255,255,255,.6);
+    padding: 12px 18px 20px;
+    position: relative;
+  }
+  & .tabs .tab {
+    display: inline-block;
+    background-color: rgba(255,255,255,.25);
+    cursor: pointer;
+    padding: 15px 18px;
+    text-transform: uppercase;
+    float: left;
+    font-family: "RobotoBold", Arial, Tahoma, sans-serif;
+    font-size: 16px;
+    transition:(all .5s ease);
+    &.active {
+      background-color: rgba(255,255,255,.6);
+      color: $black;
+    }
+  }
+}
+.tab-item__content {
+  color: $black;
+  font-family: "RobotoBold", Arial, Tahoma, sans-serif;
+  &-list {
+    list-style: none;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    &--earth {
+      padding: 0px 0px 15px 40px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 26px;
+        height: 26px;
+        background: url("../img/sprite.png") no-repeat;
+        background-position:-10px -10px;
+        top: 10%;
+        left: 5px;
+      }
+    }
+    &--hamburger {
+      @extend .tab-item__content-list--earth;
+      &::before {
+        width: 24px;
+        height: 18px;
+        background-position:-10px -549px;
+      }
+    }
+    &--hat {
+      @extend .tab-item__content-list--earth;
+      &::before {
+        width: 32px;
+        height: 20px;
+        background-position:-10px -587px;
+        left: 0;
+      }
+    }
+  }
+}
+
+/*Other content*/
+.top-description {
+  margin-top: 70px;
+  &__title {
+    color: $white;
+    font-size: 60px;
+    line-height: 56px;
+    font-family: "CleanvertisingLight", Arial, Tahoma, sans-serif;
+    font-weight: 700;
+    margin: 0;
+  }
+  &__title--h2 {
+    margin: 10px 0 0;
+    font-family: "CleanvertisingLight", Arial, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: $white;
+  }
+}

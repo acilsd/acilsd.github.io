@@ -1,0 +1,83 @@
+.btn--red {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 32px;
+  background-color: $red;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  font-family: "RobotoBold", Arial, Tahoma, sans-serif;
+  color: $white;
+  border-radius: 3px;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+  &-sm {
+    @extend .btn--red;
+    padding: 1px 32px;
+  }
+}
+.btn--green {
+  @extend .btn--red;
+  background-color: $green;
+  width: 100%;
+  margin-top: 20px;
+}
+.btn-wrapper--red {
+  width: 100%;
+  text-align: right;
+}
+.btn-wrapper--white {
+  width: 100%;
+  text-align: center;
+}
+.btn--white {
+  @extend .btn--red;
+  background-color: $white;
+  color: $black;
+  text-decoration: none;
+  font-family: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.contacts-line__tab {
+  @extend .btn--red;
+  background-color: $white;
+  color: $black;
+  border: 5px solid $red;
+  padding: 5px 60px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:first-child {
+    border-radius: 3px 0 0 3px;
+  }
+  &:last-child {
+    border-radius: 0 3px 3px 0;
+  }
+  &.active {
+    background-color: $red;
+    color: $white;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.btn--footer {
+  @extend .btn--red;
+  padding: 7px 60px;
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: $white;
+  }
+}
