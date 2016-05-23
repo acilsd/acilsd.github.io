@@ -1,17 +1,20 @@
-@import "components/_normalize.min.scss";
-@import "_base-layout.scss";
-@import "_fonts.scss";
-@import "components/_variables.scss";
-@import "components/_buttons.scss";
-@import "components/_slider.scss";
-@import "components/_mixins.scss";
+@import "utils/variables";
+@import "utils/mixins";
 
-@import "blocks/_header.scss";
-@import "blocks/_features.scss";
-@import "blocks/_app-features.scss";
-@import "blocks/_screenshots.scss";
-@import "blocks/_quotions.scss";
-@import "blocks/_support.scss";
-@import "blocks/_newsletter.scss";
-@import "blocks/_blog.scss";
-@import "blocks/_footer.scss";
+@import "base/normalize.min";
+@import "base/base";
+@import "base/typography";
+
+
+@import "components/buttons";
+@import "components/slider";
+@import "components/newsletter";
+@import "components/screenshots";
+@import "components/support";
+
+@import "layout/header";
+@import "layout/features";
+@import "layout/app-features";
+@import "layout/quotions";
+@import "layout/blog";
+@import "layout/footer";
