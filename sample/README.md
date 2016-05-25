@@ -1,1 +1,1 @@
-#Sample project structure (simple)
+#Simple (sample)
