@@ -1,0 +1,19 @@
+.slider__nav {
+  width: 100%;
+}
+.slider__arrow {
+  position: absolute;
+  color: #67E03A;
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: 300;
+  opacity: 0.8;
+  &--prev {
+    bottom: 45%;
+    left: 0;
+  }
+  &--next {
+    bottom: 45%;
+    right: 0;
+  }
+}

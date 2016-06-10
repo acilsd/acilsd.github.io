@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  &::after {
+    box-sizing: inherit;
+  }
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "RobotoSlabRegular"m Arial, Tahoma, serif;
+  text-transform: uppercase;
+  background-color: #ffe;
+}
+
+.wrapper {
+  max-width: 1200px;
+  min-width: 480px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 150px;
+}

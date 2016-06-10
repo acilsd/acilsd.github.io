@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simple slider</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <header class="main-header">
+    <h1 class="main-header__title">Simple slider with few options and dynamic pagination</h1>
+    <p>
+      Work in progress, adding some more options. Code needs serious refactoring and optimization. Currently not working in IE! (sorry, microsoft);
+  </p>
+  </header>
+
+
+  <h3>Default horizontal slider</h3>
+  <div class="slider-base">
+    <div class="slider-wrapper">
+      <div class="slider__container">
+        <div class="slider__elem active"><img src="img/slider-h--full/1.jpg" alt="pic1"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/2.jpg" alt="pic2"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/3.jpg" alt="pic3"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/4.jpg" alt="pic4"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/5.jpg" alt="pic5"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/6.jpg" alt="pic6"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/7.jpg" alt="pic7"></div>
+      </div>
+
+      <div class="slider__nav">
+        <a href="#" class="slider__arrow slider__arrow--prev">
+          <i class="icon-chevron-left icon large"></i>
+        </a>
+        <a href="#" class="slider__arrow slider__arrow--next">
+          <i class="icon-chevron-right icon large"></i>
+        </a>
+      </div>
+      <ul class="slider__pagination">
+
+      </ul>
+    </div>
+
+
+  </div>
+
+  <h3>Horizontal slider with a group of elements in one slider</h3>
+  <div class="slider-oneshot">
+    <div class="slider-wrapper">
+      <div class="slider__container">
+
+        <div class="slider__elem">
+          <img src="img/slider-h--partial/1.jpg" alt="pic1">
+          <img src="img/slider-h--partial/2.jpg" alt="pic2">
+          <img src="img/slider-h--partial/3.jpg" alt="pic3">
+        </div>
+        <div class="slider__elem">
+          <img src="img/slider-h--partial/4.jpg" alt="pic4">
+          <img src="img/slider-h--partial/5.jpg" alt="pic5">
+          <img src="img/slider-h--partial/6.jpg" alt="pic6">
+        </div>
+        <div class="slider__elem">
+          <img src="img/slider-h--partial/7.jpg" alt="pic7">
+          <img src="img/slider-h--partial/8.jpg" alt="pic8">
+          <img src="img/slider-h--partial/9.jpg" alt="pic9">
+        </div>
+
+        <div class="slider__elem">
+          <img src="img/slider-h--partial/10.jpg" alt="pic10">
+          <img src="img/slider-h--partial/11.jpg" alt="pic11">
+          <img src="img/slider-h--partial/12.jpg" alt="pic12">
+        </div>
+      </div>
+
+      <div class="slider__nav">
+        <a href="#" class="slider__arrow slider__arrow--prev">
+          <i class="icon-chevron-left icon large"></i>
+        </a>
+        <a href="#" class="slider__arrow slider__arrow--next">
+          <i class="icon-chevron-right icon large"></i>
+        </a>
+      </div>
+
+      <ul class="slider__pagination">
+
+      </ul>
+    </div>
+
+
+  </div>
+
+  <h3>Vertical slider</h3>
+  <div class="slider-vertical">
+    <div class="slider-wrapper">
+      <div class="slider__container">
+        <div class="slider__elem"><img src="img/slider-h--full/1.jpg" alt="pic1"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/2.jpg" alt="pic2"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/3.jpg" alt="pic3"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/4.jpg" alt="pic4"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/5.jpg" alt="pic5"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/6.jpg" alt="pic6"></div>
+        <div class="slider__elem"><img src="img/slider-h--full/7.jpg" alt="pic7"></div>
+      </div>
+
+      <div class="slider__nav">
+        <a href="#" class="slider__arrow slider__arrow--prev">
+          <i class="icon-chevron-left icon large"></i>
+        </a>
+        <a href="#" class="slider__arrow slider__arrow--next">
+          <i class="icon-chevron-right icon large"></i>
+        </a>
+      </div>
+      <ul class="slider__pagination">
+
+      </ul>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<script src="js/main.js"></script>
+<script>
+      new Slider('.slider-base', {
+        direction: 'horizontal',
+        currentSlide: 3,
+      });
+      new Slider('.slider-oneshot', {
+        direction: 'horizontal',
+        currentSlide: 0,
+      });
+      new Slider('.slider-vertical', {
+        direction: 'vertical',
+        currentSlide: 0,
+      });
+</script> -->
+
+</body>
+</html>
