@@ -21,9 +21,9 @@ $(function() {
     e.preventDefault();
     if(this.inputField.val().replace(/\s+/g, '').length === 0) {
       return;
-	  }
+    }
     this.addItem(this.inputField.val());
-    this.form.trigger('reset');
+    this.form.trigger('reset');  
   };
 //adding value
   ToDo.prototype.addItem = function(todoText) {
