@@ -1,1 +1,1 @@
-#Simple ToDo list with localstorage
+#Simple ToDo list
