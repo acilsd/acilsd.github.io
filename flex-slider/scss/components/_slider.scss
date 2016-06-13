@@ -12,6 +12,7 @@
   display: flex;
   position: relative;
   transition: margin .5s ease-out;
+  flex-flow: row wrap;
 }
 
 .slider__elem {

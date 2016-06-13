@@ -11,6 +11,7 @@ function Slider(selector, options) {
   var currentSlideIndex = options.currentSlide || 0;
   var totalImages = sliderContainer.children.length;
 
+//events
   sliderShowPrev.onclick = function(e) {
     e.preventDefault();
     __self.showPrev();
@@ -28,13 +29,9 @@ function Slider(selector, options) {
     currentSlideIndex = +link.dataset['item'];
     __self.changeActive();
     __self.__render();
-  }
-  this.changeActive = function () {
-    for (var i = 0; i < totalImages; i++) {
-      sliderPagination.children[i].classList.remove('active');
-    }
-    sliderPagination.children[currentSlideIndex].classList.add('active');
   };
+
+//RENDER
   this.showPrev = function() {
     if (currentSlideIndex === 0) {
       currentSlideIndex = totalImages - 1;
@@ -53,6 +50,22 @@ function Slider(selector, options) {
     currentSlideIndex++;
     __self.changeActive();
   };
+  this.__render = function() {
+    if (slideDirection === 'horizontal') {
+      sliderElement.style.marginLeft = -(currentSlideIndex * sliderElement.offsetWidth) + 'px';
+    } else if (slideDirection === 'vertical') {
+      sliderElement.style.marginTop = -(currentSlideIndex * sliderElement.offsetHeight) + 'px';
+    }
+    // TODO: animationTime
+  };
+
+//PAGINATION
+  this.changeActive = function () {
+    for (var i = 0; i < totalImages; i++) {
+      sliderPagination.children[i].classList.remove('active');
+    }
+    sliderPagination.children[currentSlideIndex].classList.add('active');
+  };
   this.pagination = function() {
     for (var i = 0; i < totalImages; i++) {
       var paginationList = document.createElement('li');
@@ -62,13 +75,9 @@ function Slider(selector, options) {
     }
     sliderPagination.children[currentSlideIndex].classList.add('active');
   };
-  this.__render = function() {
-    if (slideDirection === 'horizontal') {
-      sliderElement.style.marginLeft = -(currentSlideIndex * sliderElement.offsetWidth) + 'px';
-    } else if (slideDirection === 'vertical') {
-      sliderElement.style.marginTop = -(currentSlideIndex * sliderElement.offsetHeight) + 'px';
-    }
-  };
+
+
+
   this.__init = function() {
     if (slideDirection === 'vertical') {
       sliderContainer.style.display = 'block';
