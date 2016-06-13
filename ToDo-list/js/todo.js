@@ -1,26 +1,18 @@
 $(function() {
   'use strict';
   var todoList = {
-    model: [
-      {text: 'Do something!'}
-    ],
+    model: [],
     selectElements: function() {
       this.inputField = $('.task-form__text');
       this.form = $('.task-form');
       this.toDoList = $('.table__body');
       this.tmpl = '<tr><th>:position</th><td>:text</td><td><button type="button" data-index=":index" class="btn btn-danger">x</button></td></tr>';
-    },
+    },  
     getLength: function() {
       return this.model.length;
     },
     replaceTmpl: function(position, item) {
       return this.tmpl.replace(/:position/gi, position).replace(/:text/gi, item).replace(/:index/gi, position -1);
-    },
-    onFormSubmit: function(e) {
-      e.preventDefault();
-      if(this.inputField.val().replace(/\s+/g, '').length === 0) { return; }
-      this.addItem(this.inputField.val());
-      this.form.trigger('reset');
     },
     addItem: function(todoText) {
       var newTodo = { text: todoText };
@@ -30,6 +22,16 @@ $(function() {
     renderItem: function(index, item) {
       this.toDoList.append(this.replaceTmpl(index, item.text));
     },
+    removeItem: function(index) {
+      this.model.splice(index, 1);
+      this.renderList();
+    },
+    onFormSubmit: function(e) {
+      e.preventDefault();
+      if(this.inputField.val().replace(/\s+/g, '').length === 0) { return; }
+      this.addItem(this.inputField.val());
+      this.form.trigger('reset');
+    },
     renderList: function() {
       var list = '',
           __self = this;
@@ -37,10 +39,6 @@ $(function() {
         list += __self.replaceTmpl(index + 1, item.text);
       });
       this.toDoList.html(list);
-    },
-    removeItem: function(index) {
-      this.model.splice(index, 1);
-      this.renderList();
     },
     init: function() {
       var __self = this;
