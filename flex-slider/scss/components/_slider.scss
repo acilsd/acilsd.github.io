@@ -9,12 +9,13 @@
 
 .slider__container {
   display: flex;
-  position: relative;
-  flex-flow: row wrap;
-
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .slider__elem {
-  display: flex;
-  //transition: margin .5s ease-in;
+  transition: margin .5s ease-in;
+  font-size: 0;
+  width: 900px;
 }
