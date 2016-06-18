@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple RSS reader</title>
+  <link rel="stylesheet" href="app/css/main.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <header class="main-header">
+      <h1>Simple RSS reader</h1>
+      <p>Based on JQuery AJAX</p>
+      <a class="btn--header" target="_blank" href="#">Back to portfolio</a>
+      <a class="btn--header" target="_blank" href="#">Show sources (git)</a>
+    </header>
+
+    <nav class="main-navigation">
+      <ul class="sf-menu">
+          <li class="menu__li_habr">
+            <a class="menu__item" href="#habr">Habrahabr</a>
+          </li>
+          <li class="menu__li_sm">
+            <a class="menu__item" href="#sm">SmashingMagazine</a>
+          </li>
+          <li class="menu__li_fe">
+            <a class="menu__item" href="#fe">Frontender</a>
+          </li>
+      </ul>
+    </nav>
+
+    <div class="articles"></div>
+    <a class="load" href="#">LOAD MORE</a>
+
+    <article class="article article_tmpl">
+      <div class="entry-title">
+        <div class="meta">
+          <span class="date"></span> by
+          <span class="author"></span>
+        </div>
+        <h2 class="post-heading"></h2>
+      </div>
+      <div class="excerpt"></div>
+      <a href="#" target="_blank" class="action-button">READ MORE</a>
+    </article>
+
+
+  </div>
+
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="app/js/main.js"></script>
+</body>
+</html>
