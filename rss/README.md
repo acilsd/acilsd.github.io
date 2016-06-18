@@ -1,1 +1,2 @@
-# Sample project structure that i use
+# Simple RSS reader
+server-side provided by Puzankov
