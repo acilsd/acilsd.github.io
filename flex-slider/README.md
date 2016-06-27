@@ -1,1 +1,1 @@
-#Simple (sample)
+#Simple JS slider based on flex layout
