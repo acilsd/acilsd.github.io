@@ -7,7 +7,7 @@ $(function() {
       this.form = $('.task-form');
       this.toDoList = $('.table__body');
       this.tmpl = '<tr><th>:position</th><td>:text</td><td><button type="button" data-index=":index" class="btn btn-danger">x</button></td></tr>';
-    },  
+    },
     getLength: function() {
       return this.model.length;
     },
@@ -28,7 +28,9 @@ $(function() {
     },
     onFormSubmit: function(e) {
       e.preventDefault();
-      if(this.inputField.val().replace(/\s+/g, '').length === 0) { return; }
+      if(this.inputField.val().replace(/\s+/g, '').length === 0) {
+        return; 
+      }
       this.addItem(this.inputField.val());
       this.form.trigger('reset');
     },

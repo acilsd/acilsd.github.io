@@ -1,0 +1,6 @@
+.intro {
+  @include article;
+  width: 100%;
+  background: $black url("../img/main-bg.jpg") no-repeat 50% 120%;
+  background-size: cover;
+}

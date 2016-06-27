@@ -1,0 +1,15 @@
+.about {
+  width: 100%;
+  background: transparent;
+  padding: 50px 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  &-text {
+    color: $white;
+    font-size: 1.2em;
+    text-align: left;
+    padding: 5px;
+  }
+}

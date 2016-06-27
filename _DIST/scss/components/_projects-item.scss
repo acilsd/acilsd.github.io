@@ -1,0 +1,63 @@
+.projects__item {
+  @include project-item;
+  &--slider {
+    background-color: $clr-sld;
+  }
+  &--rss {
+    background-color: $clr-rss;
+  }
+  &--hill {
+    background-color: $clr-hill;
+  }
+  &--todo {
+    background-color: $clr-todo;
+  }
+  &--olivia {
+    background-color: $clr-olivia;
+  }
+  &--pink {
+    background-color: $clr-pink;
+  }
+  &--btst {
+    background-color: $clr-btst;
+  }
+  &--sedona {
+    background-color: $clr-sedona;
+  }
+  &--elegant {
+    background-color: $clr-elegant;
+  }
+  &-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    color: $white-trn;
+    font-size: 1.1em;
+    z-index: 100;
+  }
+  &-text {
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
+    padding: 0 5px;
+    color: $white;
+  }
+  &-abs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 10;
+  }
+}
+
+.projects__item:hover .projects__item-abs {
+  display: flex;
+  flex-flow: column-wrap;
+  justify-content: center;
+  align-items: center;
+}
