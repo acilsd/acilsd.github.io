@@ -33,7 +33,7 @@
     h.style.position = 'static';
     stuck = false;
   };
- }, 100);
+}, 40);
  window.addEventListener('scroll', stickyHeader);
 }());
 
@@ -42,7 +42,27 @@
   'use strict';
   var menuLink = document.querySelectorAll('.menu-link');
   var menuList = {};
-  var i = 0;
+  var linkHashList = document.querySelectorAll('[href^="#link"]');
+  var scrollSpeed = 0.3;
+  // console.log(linkHashList);
+    // NOTE: smooth scroll by hash
+  for (var i = 0; i < linkHashList.length; i++) {
+    linkHashList[i].onclick = function() {
+      var pageWidth = window.pageYOffset;
+      var hash = this.href.replace(/[^#]*(.*)/, '$1');
+      var top = document.querySelector(hash).getBoundingClientRect().top;
+      var start = null;
+      requestAnimationFrame(step);
+      function step(time) {
+        if(start === null) {start = time;}
+        var progress = time - start;
+        var rect = (top < 0 ? Math.max(pageWidth - progress / scrollSpeed, pageWidth + top) : Math.min(pageWidth + progress / scrollSpeed, pageWidth + top));
+        window.scrollTo(0,rect);
+        if(rect != pageWidth + top) {requestAnimationFrame(step)} else {location.hash = hash;}
+      };
+      return false;
+    };
+  };
   function debounce(func, wait, immediate) {
 	   var timeout;
 	    return function() {
@@ -60,21 +80,16 @@
   Array.prototype.forEach.call(menuLink, function(e) {
       menuList[e.id] = e.offsetTop;
   });
+  // NOTE: scrollspy
   var scrollSpy = debounce(function() {
     var scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
-    for(i in menuList) {
-      if(menuList[i] <= scrollPosition) {
+    var j = 0;
+    for(j in menuList) {
+      if(menuList[j] <= scrollPosition) {
         document.querySelector('.active').setAttribute('class', 'navigation__link');
-        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'navigation__link active');
+        document.querySelector('a[href*=' + j + ']').setAttribute('class', 'navigation__link active');
       }
     }
-  },50);
+  },40);
   window.addEventListener('scroll', scrollSpy);
-}());
-
-
-
-// NOTE: buttons
-(function() {
-
 }());

@@ -50,14 +50,22 @@
     background: inherit;
     left: 0;
     top: 0;
-    display: none;
+    display: flex;
+    flex-flow: column-wrap;
+    justify-content: center;
+    align-items: center;
     z-index: 10;
+    transition: visibility 0.5s, opacity 1s;
+    visibility: hidden;
+    opacity: 0;
   }
 }
-
+.projects__item:hover {
+  transition: all .3s linear;
+  transform: scale(1.1);
+}
 .projects__item:hover .projects__item-abs {
-  display: flex;
-  flex-flow: column-wrap;
-  justify-content: center;
-  align-items: center;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
 }
