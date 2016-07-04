@@ -7,19 +7,22 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    uglify = require('gulp-uglify');
 
 var path = {
   build: {
-    css: 'css/',
-    img: 'img/'
+    css: 'MAIN/css/',
+    img: 'MAIN/img/',
+    js: 'MAIN/js/'
   },
   src: {
-    style: 'scss/main.scss',
-    img: 'src/img/**/*.*'
+    style: 'DIST/scss/main.scss',
+    img: 'DIST/img/**/*.*',
+    js: 'DIST/js/*.js'
   },
   watch: {
-    style: 'scss/**/*.scss'
+    style: 'DIST/scss/**/*.scss'
   }
 };
 
@@ -46,6 +49,12 @@ gulp.task('image:build', function(){
       interlaced: true
     }))
     .pipe(gulp.dest(path.build.img))
+});
+
+gulp.task('js:build', function() {
+  gulp.src(path.src.js)
+    .pipe(uglify())
+    .pipe(gulp.dest(path.build.js));
 });
 
 gulp.task('build', [
