@@ -1,5 +1,5 @@
 ##a very basic webpack boilerplate
-###from newfag, for newfags :3
+###from newfag, for newfags
 ***
 ####Using:
 	$npm install
@@ -11,7 +11,7 @@
 	
 	$set NODE_END=production for production build
 	
-	$webpack for a simple build+watch (withour WDS and HMR)
+	$webpack for a simple build+watch (without WDS and HMR)
 	
 ***
 no prepros atm, just a simple modular css
