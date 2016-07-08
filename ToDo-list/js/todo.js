@@ -15,7 +15,7 @@ $(function() {
       return this.tmpl.replace(/:position/gi, position).replace(/:text/gi, item).replace(/:index/gi, position -1);
     },
     addItem: function(todoText) {
-      var newTodo = { text: todoText };
+      var newTodo = { text: todoText };      
       this.model.push(newTodo);
       this.renderItem(this.getLength(), newTodo);
     },
@@ -29,7 +29,7 @@ $(function() {
     onFormSubmit: function(e) {
       e.preventDefault();
       if(this.inputField.val().replace(/\s+/g, '').length === 0) {
-        return; 
+        return;
       }
       this.addItem(this.inputField.val());
       this.form.trigger('reset');
