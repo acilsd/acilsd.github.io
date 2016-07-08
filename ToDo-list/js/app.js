@@ -15,8 +15,9 @@ $(function() {
       return this.tmpl.replace(/:position/gi, position).replace(/:text/gi, item).replace(/:index/gi, position -1);
     },
     addItem: function(todoText) {
-      var newTodo = { text: todoText };      
+      var newTodo = { text: todoText };
       this.model.push(newTodo);
+      this.addToLocal();
       this.renderItem(this.getLength(), newTodo);
     },
     renderItem: function(index, item) {
@@ -24,6 +25,7 @@ $(function() {
     },
     removeItem: function(index) {
       this.model.splice(index, 1);
+      this.addToLocal();
       this.renderList();
     },
     onFormSubmit: function(e) {
@@ -42,7 +44,20 @@ $(function() {
       });
       this.toDoList.html(list);
     },
+    addToLocal: function() {
+      var str = JSON.stringify(this.model);
+      localStorage.setItem('todos', str);
+      console.log('ls updated');
+    },
+    getFromLocal: function() {
+      var str = localStorage.getItem('todos');
+      this.model = JSON.parse(str);
+      if(!this.model) {
+        this.model = [];
+      }
+    },
     init: function() {
+      this.getFromLocal();
       var __self = this;
       this.selectElements();
       this.toDoList.on('click', '.btn-danger', function(e) {
