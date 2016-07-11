@@ -9,7 +9,7 @@ module.exports = {
   entry: './main',
   output: {
     path: path.join(__dirname, '/app'),
-    publicPath: '/app',
+    publicPath: '/app/',
     filename: 'app.js'
   },
   devtool: NODE_ENV == 'development' ? 'cheap-inline-module-source-map' : null,
@@ -28,21 +28,27 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: [/node_modules/, /app/],
+        exclude: [/node_modules/],
         loader: 'babel',
-        query: { presets: ['es2015', 'react'] }
+        query: {
+          presets: ['react', 'es2015', 'stage-0', 'stage-1'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+        }
       },
       {
         test: /\.jsx?$/,
-        exclude: [/node_modules/, /app/],
+        exclude: [/node_modules/],
         loader: 'babel',
-        query: { presets: ['es2015', 'react'] }
+        query: {
+          presets: ['react', 'es2015', 'stage-0', 'stage-1'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+        }
       },
       // {
       //   test: /\.js$/,
       //   exclude: [/node_modules/, /app/],
       //   loader: 'babel',
-      //   query: { presets: ['es2015'] }
+      //   query: { presets: ['es2015', 'stage-0'] }
       // },
       {
         test: /\.(jpg|jpeg|gif|png)$/,
