@@ -21,20 +21,22 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
-      NODE_ENV: JSON.stringify(NODE_ENV)
+      'process.env': {
+        NODE_ENV: JSON.stringify(NODE_ENV)
+      }
     })
   ],
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        exclude: [/node_modules/],
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015', 'stage-0', 'stage-1'],
-          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
-        }
-      },
+      // {
+      //   test: /\.js$/,
+      //   exclude: [/node_modules/],
+      //   loader: 'babel',
+      //   query: {
+      //     presets: ['react', 'es2015', 'stage-0', 'stage-1'],
+      //     plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+      //   }
+      // },
       {
         test: /\.jsx?$/,
         exclude: [/node_modules/],
@@ -44,12 +46,6 @@ module.exports = {
           plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
         }
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: [/node_modules/, /app/],
-      //   loader: 'babel',
-      //   query: { presets: ['es2015', 'stage-0'] }
-      // },
       {
         test: /\.(jpg|jpeg|gif|png)$/,
         loader:'url-loader?limit=1024&name=images/[name].[ext]'
