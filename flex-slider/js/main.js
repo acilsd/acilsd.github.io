@@ -11,7 +11,6 @@ function Slider(selector, options) {
   var currentSlideIndex = options.currentSlide || 0;
   var totalImages = sliderContainer.children.length;
 
-//events
   sliderShowPrev.onclick = function(e) {
     e.preventDefault();
     __self.showPrev();
@@ -31,7 +30,6 @@ function Slider(selector, options) {
     __self.__render();
   };
 
-//RENDER
   this.showPrev = function() {
     if (currentSlideIndex === 0) {
       currentSlideIndex = totalImages - 1;
@@ -59,7 +57,6 @@ function Slider(selector, options) {
     // TODO: animationTime
   };
 
-//PAGINATION
   this.changeActive = function () {
     for (var i = 0; i < totalImages; i++) {
       sliderPagination.children[i].classList.remove('active');
@@ -75,8 +72,6 @@ function Slider(selector, options) {
     }
     sliderPagination.children[currentSlideIndex].classList.add('active');
   };
-
-
 
   this.__init = function() {
     if (slideDirection === 'vertical') {
