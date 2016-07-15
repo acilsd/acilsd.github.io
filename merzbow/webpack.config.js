@@ -6,7 +6,7 @@ const path = require('path');
 
 module.exports = {
   context: path.join(__dirname, '/dist'),
-  entry: './main',
+  entry: ['babel-polyfill', './main'],
   output: {
     path: path.join(__dirname, '/app'),
     publicPath: '/app/',
@@ -27,7 +27,16 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [    
+    loaders: [
+      {
+        test: /\.js?$/,
+        exclude: [/node_modules/],
+        loader: 'babel',
+        query: {
+          presets: ['react', 'es2015', 'stage-0', 'stage-1'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+        }
+      },
       {
         test: /\.jsx?$/,
         exclude: [/node_modules/],
