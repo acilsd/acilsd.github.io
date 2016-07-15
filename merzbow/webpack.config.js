@@ -27,16 +27,7 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: [/node_modules/],
-      //   loader: 'babel',
-      //   query: {
-      //     presets: ['react', 'es2015', 'stage-0', 'stage-1'],
-      //     plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
-      //   }
-      // },
+    loaders: [    
       {
         test: /\.jsx?$/,
         exclude: [/node_modules/],
