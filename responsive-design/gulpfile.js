@@ -29,7 +29,8 @@ var path = {
 gulp.task('style:build', function(){
   gulp.src(path.src.style)
     .pipe(plumber())
-    .pipe(sass().on('error', function(err){
+    .pipe(sass({includePaths:       require('node-normalize-scss').includePaths})
+      .on('error', function(err){
       console.log("error: " + err.message);
       this.emit('end');
     }))
