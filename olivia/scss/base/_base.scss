@@ -3,6 +3,7 @@ body {
   line-height: 30px;
   font-family: "Open Sans", Arial, Tahoma, sans-serif;
   font-weight: 400;
+  min-width: 990px;
 }
 
 * {
@@ -16,8 +17,7 @@ body {
 }
 
 .main-wrapper {
-  min-width: 990px;
-  max-width: 1170px;
+  max-width: 1170px;  
   margin: 0 auto;
   position: relative;
 }

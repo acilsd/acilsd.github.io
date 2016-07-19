@@ -7,29 +7,29 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    plumber = require('gulp-plumber'),
-    uglify = require('gulp-uglify');
+    plumber = require('gulp-plumber');
 
 var path = {
   build: {
-    css: 'MAIN/css/',
-    img: 'MAIN/img/',
-    js: 'MAIN/js/'
+    css: 'css/',
+    img: 'img/',
+    js: 'js/'
   },
   src: {
-    style: 'DIST/scss/main.scss',
-    img: 'DIST/img/**/*.*',
-    js: 'DIST/js/*.js'
+    style: 'scss/main.scss',
+    img: 'img/**/*.*',
+    js: 'js/*.js'
   },
   watch: {
-    style: 'DIST/scss/**/*.scss'
+    style: 'scss/**/*.scss'
   }
 };
 
 gulp.task('style:build', function(){
   gulp.src(path.src.style)
     .pipe(plumber())
-    .pipe(sass().on('error', function(err){
+    .pipe(sass({includePaths: require('node-normalize-scss').includePaths})
+      .on('error', function(err){
       console.log("error: " + err.message);
       this.emit('end');
     }))
@@ -51,11 +51,6 @@ gulp.task('image:build', function(){
     .pipe(gulp.dest(path.build.img))
 });
 
-gulp.task('js:build', function() {
-  gulp.src(path.src.js)
-    .pipe(uglify())
-    .pipe(gulp.dest(path.build.js));
-});
 
 gulp.task('build', [
   'style:build'
