@@ -5,13 +5,14 @@ export function scroll() {
   let scrollSpeed = 0.3;
 
   for (let i = 0; i < linkHashList.length; i++) {
-    linkHashList[i].onclick = function() {
-      const pageWidth = window.pageYOffset;
-      let hash = this.href.replace(/[^#]*(.*)/, '$1');
+    linkHashList[i].onclick = (e) => {
+      let pageWidth = window.pageYOffset;
+      let target = e.target;
+      let hash = target.href.replace(/[^#]*(.*)/, '$1');
       let top = document.querySelector(hash).getBoundingClientRect().top;
       let start = null;
       requestAnimationFrame(step);
-
+      //fckn magic i was drugged while writing this
       function step(time) {
         if(start === null) {start = time;}
         let progress = time - start;
