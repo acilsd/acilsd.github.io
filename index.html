@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="MAIN/css/main.css" >
+    <link rel="stylesheet" href="build/css/main.css" >
     <title>acilsd's lounge</title>
   </head>
   <body>
-    <main class="intro">
+    <main id="linkabout" class="menu-link intro">
 
       <div class="wrapper">
-        <section id="linkabout" class="menu-link intro-content">
+        <section class="intro-content">
           <h1 class="intro-content__title">const acilsd;</h1>
           <p class="intro-content__text">({ HTML5, CSS3, JS, React })</p>
         </section>
       </div>
-
       <nav id="sticky" class="navigation">
         <div class="navigation__menu">
           <a class="navigation__link active" href="#linkabout">About</a>
@@ -26,8 +25,7 @@
           <a class="navigation__link" href="#linkcontacts">Contacts</a>
         </div>
       </nav>
-
-      <section class="about">
+      <section id="about" class="about">
         <p class="about-text" style="text-align: center">Greetings! My name is Arteom, i live in Moscow (Russia) and i am a junior frontend developer</p>
         <p class="about-text">I like everything connected with computer science: i studied assemblers, LISP, a little bit of Python and PHP. I love JS, even when it throws an unexpected error (yeah, im a bit masochistic). By now i've mastered a full-stack of technologies connected with HTML/CSS and client-side JS. I like modern exquisite design, dark themes and tiles. And music. And winter. And cats (who doesn't?)</p>
       </section>
@@ -213,10 +211,10 @@
           </ul>
         </div>
         <p class="contacts-text">Sources for this portfolio are available by the link below:</p>
-        <a class="projects__item-link" href="https://github.com/acilsd/acilsd.github.io/tree/master/DIST" target="_blank">Sources</a>
+        <a class="projects__item-link" href="https://github.com/acilsd/acilsd.github.io/tree/master/dist" target="_blank">Sources</a>
       </div>
     </article>
 
-  <script src="MAIN/js/main.js"></script>
+  <script src="build/js/main.js"></script>
   </body>
 </html>

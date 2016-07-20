@@ -2,6 +2,9 @@
   width: 100%;
   background-color: $black-trn;
   z-index: 1000;
+  position: absolute;
+  top: 50vh;
+  left: 0;
   &__menu {
     width: 1366px;
     margin: 0 auto;
