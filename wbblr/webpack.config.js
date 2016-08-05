@@ -6,11 +6,11 @@ const path = require('path');
 
 module.exports = {
   context: path.join(__dirname, '/dist'),
-  entry: './main',
+  entry: './index',
   output: {
     path: path.join(__dirname, '/app'),
     publicPath: '/app/',
-    filename: 'app.js'
+    filename: 'bundle.js'
   },
   devtool: NODE_ENV == 'development' ? 'cheap-inline-module-source-map' : null,
   watch: NODE_ENV == 'development',
@@ -28,15 +28,6 @@ module.exports = {
   ],
   module: {
     loaders: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: [/node_modules/],
-      //   loader: 'babel',
-      //   query: {
-      //     presets: ['react', 'es2015', 'stage-0', 'stage-1'],
-      //     plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
-      //   }
-      // },
       {
         test: /\.jsx?$/,
         exclude: [/node_modules/],
@@ -48,22 +39,23 @@ module.exports = {
       },
       {
         test: /\.(jpg|jpeg|gif|png)$/,
-        loader:'url-loader?limit=1024&name=images/[name].[ext]'
+        loader: 'url-loader?limit=10000&name=images/[name].[ext]'
       },
       {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
-        loader: 'url-loader?limit=1024&name=fonts/[name].[ext]'
+        test: /\.(woff|woff2|eot|ttf)$/,
+        loader: 'url-loader?limit=10000&name=fonts/[name].[ext]'
       },
       {
         test: /\.css$/,
         loader: "style-loader!css-loader",
-        exclude: [/node_modules/, /app/]
+        exclude: [/node_modules/]
       }
     ]
   },
   devServer: {
     devtool: 'cheap-inline-module-source-map',
-    hot: true
+    hot: true,
+    historyApiFallback: true
   }
 };
 
