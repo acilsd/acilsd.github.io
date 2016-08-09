@@ -12,17 +12,17 @@ var gulp = require('gulp'),
 
 var path = {
   build: {
-    css: 'MAIN/css/',
-    img: 'MAIN/img/',
-    js: 'MAIN/js/'
+    css: 'build/css/',
+    img: 'build/img/',
+    js: 'build/js/'
   },
   src: {
-    style: 'DIST/scss/main.scss',
-    img: 'DIST/img/**/*.*',
-    js: 'DIST/js/*.js'
+    style: 'src/scss/main.scss',
+    img: 'src/img/**/*.*',
+    js: 'src/js/*.js'
   },
   watch: {
-    style: 'DIST/scss/**/*.scss'
+    style: 'src/scss/**/*.scss'
   }
 };
 

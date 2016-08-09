@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  context: path.join(__dirname, '/dist/js'),
+  context: path.join(__dirname, '/src/js'),
   entry: './main',
   output: {
     path: path.join(__dirname, '/build/js'),

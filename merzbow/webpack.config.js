@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  context: path.join(__dirname, '/dist'),
+  context: path.join(__dirname, '/src'),
   entry: ['babel-polyfill', './main'],
   output: {
     path: path.join(__dirname, '/app'),
@@ -36,7 +36,7 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0', 'stage-1'],
           plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
         }
-      },      
+      },
       {
         test: /\.css$/,
         loader: "style-loader!css-loader",
