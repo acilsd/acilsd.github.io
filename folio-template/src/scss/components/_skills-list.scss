@@ -1,0 +1,17 @@
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  &__item {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    color: $gray;
+    text-align: center;
+  }
+}
+
+.skills-description {
+  font-size: 1em;
+  padding: 5px;
+}

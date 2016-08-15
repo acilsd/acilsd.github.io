@@ -1,0 +1,15 @@
+.intro-content {
+  height: 50vh;
+  @include flex-center;
+  &__title {
+    color: $white;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+  }
+  &__text {
+    color: $black-trn;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
