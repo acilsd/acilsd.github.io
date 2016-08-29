@@ -1,3 +1,3 @@
 # Main repo
 
-##Sources for main page: ./dist
+##Sources for main page: ./src
