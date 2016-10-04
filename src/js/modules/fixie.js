@@ -1,7 +1,7 @@
 export function stickyHeader() {
   const h = document.getElementById('sticky');
   const stickPoint = document.getElementById('about').offsetTop;
-  let offset = window.pageYOffset;
+  const offset = window.pageYOffset;
 
   if ( offset >= (stickPoint - 50) ) {
     h.style.position = 'fixed';
