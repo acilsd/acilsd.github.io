@@ -1,3 +1,3 @@
-# Main repo
+# Repo for gh-page hosting
 
-##Sources for main page: ./src
+## random layout projects and old stuff
